@@ -1,0 +1,76 @@
+---
+title: Yosef Serkez
+---
+<div class="flex rounded-xl m-5">
+    <div class="p-2">
+        <div class="h-56 w-44 float-left pr-6">
+            <img src="/assets/images/profile_pic.jpg" alt="" class=" inset-0 w-full h-full object-cover rounded-lg"/>
+        </div>
+        <div class="col-span-4 ">
+            <h1 class="text-6xl mb-6">Yosef Serkez</h1>
+            <p>My name is Yosef, I am a developer and entrepreneur who loves to learn, solve problems and build products
+                that make an impact.
+                Welcome to my personal website. Take your time to look around, and if you want to talk with me don't
+                hesitate on sending an email.</p>
+        </div>
+    </div>
+</div>
+
+<a href="/now">
+    <div class="bg-gray-100 flex space-x-8 rounded-xl m-5 ">
+        <div class="inline-block p-6 align-middle bg-gray-200 rounded-l-xl w-52">
+            <h3 class="text-3xl font-bold">/now</h3>
+            <p>What I'm doing now.</p>
+        </div>
+        <div class="self-center p-2">
+            <p class="">
+                {{site.categories.now[0].excerpt}}
+            </p>
+            <div class="text-xs text-gray-400"><span>Last Updated: </span> <span>{{site.categories.now[0].date | date: "%B %d, %Y"}}</span>
+            </div>
+            <div class="text-xs text-gray-400"><span>Location: </span> <span>{{site.categories.now[0].location}}</span>
+            </div>
+            <a href="/now" class="text-xs text-gray-800">Read more</a>
+        </div>
+    </div>
+</a>
+
+<a href="/blog">
+    <div class="bg-gray-100 flex space-x-8 rounded-xl m-5 ">
+        <div class="inline-block p-6 align-middle bg-gray-200 rounded-l-xl w-52">
+            <h3 class="text-3xl font-bold">/blog</h3>
+            <p>What I'm writing.</p>
+        </div>
+        <div class="self-center p-2">
+            <div class="text-xs text-gray-400"><span>Last Post Title: </span>
+                <a href="{{site.posts[0].url}}" class="underline">
+                    {{site.posts[0].title}}
+                </a>
+                <div class="text-xs text-gray-400"><span>Last Post Date: </span> <span>{{site.posts[0].date | date: "%B %d, %Y"}}</span>
+                </div>
+                <div class="text-xs text-gray-400"><span>Total Posts: </span> <span>{{site.posts.size}}</span>
+                </div>
+                <a href="/blog" class="text-xs text-gray-800">See all</a>
+            </div>
+        </div>
+    </div>
+</a>
+
+<a href="/bookshelf">
+    <div class="bg-gray-100 flex space-x-8 rounded-xl m-5 ">
+        <div class="inline-block p-6 align-middle bg-gray-200 rounded-l-xl w-52">
+            <h3 class="text-3xl font-bold">/bookshelf</h3>
+            <p>What I'm reading.</p>
+        </div>
+        <div class="self-center p-2">
+            <div class="text-xs text-gray-400"><span>Last Book Read: </span>
+                <a href="{{site.bookshelf[0].url}}" class="underline">
+                    {{site.bookshelf[0].title}}
+                </a>
+                <div class="text-xs text-gray-400"><span>Total Books: </span> <span>{{site.bookshelf.size}}</span>
+                </div>
+                <a href="/bookshelf" class="text-xs text-gray-800 pt-2">See all</a>
+            </div>
+        </div>
+    </div>
+</a>

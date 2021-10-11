@@ -1,0 +1,8 @@
+---
+---
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.hide-child-withouttailwind + div {display: none;}
+input.hide-child-withouttailwind:checked + div { display: block; }

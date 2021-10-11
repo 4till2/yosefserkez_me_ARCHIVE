@@ -1,0 +1,8 @@
+*.gem
+*.rbc
+/.config
+node_modules/
+/_site
+/Gemfile.lock
+.jekyll-cache/
+.idea/

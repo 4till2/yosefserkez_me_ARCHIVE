@@ -1,0 +1,22 @@
+plugins:
+  - jekyll-postcss
+page_excerpts: true
+collections:
+  bookshelf:
+   output: true
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "bookshelf"
+    values:
+      layout: "book"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      excerpt_separator: <!--more-->

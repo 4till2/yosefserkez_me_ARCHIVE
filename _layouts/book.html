@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<article class="prose p-8 w-full m-auto">
+    <div class="rounded-xl bg-gray-100 p-6">
+        <div class="">
+            <h1 class="text-4xl">{{ page.title }}</h1>
+            <div class="text-xs text-gray-400"><span>Author: </span>
+                <span>{{page.author}}</span></div>
+            <div class="text-xs text-gray-400"><span>Published: </span> <span>{{page.published}}</span></div>
+            <div class="text-xs text-gray-400"><span>Notes By: </span> <span>Yosef Serkez</span></div>
+            <div class="text-xs text-gray-400"><span>Last Updated: </span>
+                <span>{{page.date | date: "%B %d, %Y"}}</span>
+            </div>
+        </div>
+        <p class="py-2">
+            {{page.description}}
+        </p>
+    </div>
+    <div class="p-6">
+        {{ content }}
+    </div>
+</article>
