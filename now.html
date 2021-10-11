@@ -5,31 +5,31 @@ title: Now
 <div class="p-8">
     <div class="rounded-xl bg-gray-100 p-6">
         <div class="">
-            <h1 class="text-4xl">What I'm up to now.</h1>
-            <div class="text-xs text-gray-400"><span>Last Updated: </span> <span>{{site.categories.now[0].date | date: "%B %d, %Y"}}</span>
+            <span class="text-5xl font-bold">What I'm up to now.</span>
+            <div class="text-2xl lg:text-xs text-gray-400"><span>Last Updated: </span> <span>{{site.categories.now[0].date | date: "%B %d, %Y"}}</span>
             </div>
-            <div class="text-xs text-gray-400"><span>Location: </span> <span>{{site.categories.now[0].location}}</span>
+            <div class="text-2xl lg:text-xs text-gray-400"><span>Location: </span> <span>{{site.categories.now[0].location}}</span>
             </div>
         </div>
-        <p class="py-2">
+        <div class="text-3xl lg:text-lg py-2">
             {{site.categories.now[0].content}}
-        </p>
+        </div>
     </div>
-    <h1 class="text-xl mt-12 text-gray-800 pl-2">Archive</h1>
+    <h1 class="text-2xl lg:text-xl mt-12 text-gray-800 pl-2">Archive</h1>
     <ul>
         {% for now in site.categories.now %}
         <li class="rounded shadow my-2 text-gray-600">
             <label for="{{now.date | date_to_string}}">
                 <div class="p-2 hover:bg-gray-100 rounded-top cursor-pointer">
-                    <h4 class="text-lg font-mono">{{now.date | date: "%B %d, %Y"}}</h4>
-                    <div class="text-xs text-gray-400"><span>Location: </span> <span>{{now.location}}</span></div>
+                    <h4 class="text-2xl lg:text-lg font-mono">{{now.date | date: "%B %d, %Y"}}</h4>
+                    <div class="text-xl lg:text-xs text-gray-400"><span>Location: </span> <span>{{now.location}}</span></div>
                 </div>
             </label>
             <input type="checkbox" id="{{now.date | date_to_string}}"
                    class="invisible hide-child-withouttailwind absolute right-0">
-            <div class="py-6 px-2 ">
+            <div class="p-6 ">
                 <div>
-                    <p class="text-md">{{now.content}}</p>
+                    <div class="text-2xl lg:text-lg">{{now.content}}</div>
                 </div>
             </div>
         </li>

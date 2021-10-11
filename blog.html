@@ -3,24 +3,24 @@ title: Blog
 ---
 
 <div class="p-8">
-    <div class="rounded-xl bg-gray-100 p-6">
+    <div class="rounded-xl bg-gray-100 p-6 mb-8">
         <div class="">
-            <h1 class="text-4xl">Occasionally I'll Publish Something I Write.</h1>
+            <h1 class="text-5xl font-bold">Occasionally I'll Publish Something I Write.</h1>
         </div>
-        <p class="py-2">
+        <p class="py-2 text-2xl lg:text-lg">
             This section is a collection of those things I've decided to write
             and share. There is no theme here. Could be a technical breakdown, idea analysis, random prose. Ya' never
             know.
         </p>
     </div>
 
-    <ul class=" m-auto">
+    <ul class="m-auto text-2xl lg:text-lg">
         {% for post in site.posts %}
-        <li class="rounded shadow my-2 text-gray-600 hover:bg-gray-100 p-6 ">
+        <li class="rounded shadow my-4 text-gray-600 hover:bg-gray-100 p-6 ">
             <a href="{{post.url}}" class="rounded-top cursor-pointer">
                 <div class="mb-2">
-                    <h4 class="text-2xl ">{{post.title}}</h4>
-                    <div class="text-xs text-gray-400"><span>{{post.date | date: "%B %d, %Y"}}</span>
+                    <h4 class="text-4xl lg:text-xl ">{{post.title}}</h4>
+                    <div class="text-2xl lg:text-xs text-gray-400"><span>{{post.date | date: "%B %d, %Y"}}</span>
                         {% for tag in book.tags%}
                         <span class="ml-2 border-black-200 border-b border-l border-r  px-2">{{tag}}</span>
                         {% endfor %}

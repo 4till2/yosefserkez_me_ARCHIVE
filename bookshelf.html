@@ -5,10 +5,10 @@
 <div class="p-8">
     <div class="rounded-xl bg-gray-100 p-6">
         <div class="">
-            <h1 class="text-4xl">Books I've Read and Recommend.</h1>
+            <h1 class="text-5xl font-bold">Books I've Read and Recommend.</h1>
         </div>
-        <p class="py-2">
-           I love to read. Most of my reading these days is through audiobooks (I use <a class="text-green-800" href="https://www.scribd.com/g/90cwgg">Scribd</a>).
+        <p class="text-3xl lg:text-lg py-2">
+           I love to read. Most of my reading these days is done through audiobooks (I use <a class="text-green-800" href="https://www.scribd.com/g/90cwgg">Scribd</a>).
             Below is a list of the books I've completed and enjoyed.
             Click a book for more details and to read my notes, if any.
         </p>
@@ -16,11 +16,11 @@
 
 <ul class=" m-auto">
 {% for book in site.bookshelf %}
-<li class="rounded shadow my-2 text-gray-600">
-    <a href="{{book.url}}"class="p-2 hover:bg-gray-100 rounded-top cursor-pointer flex justify-between">
+<li class="rounded shadow my-8 text-gray-600">
+    <a href="{{book.url}}"class="p-6 hover:bg-gray-100 rounded-top cursor-pointer flex justify-between">
         <div>
-        <h4 class="text-lg font-mono">{{book.title}}</h4>
-        <div class="text-xs text-gray-400"><span>Author: </span> <span>{{book.author}}</span>
+        <h4 class="text-3xl lg:text-lg font-mono">{{book.title}}</h4>
+        <div class="text-2xl lg:text-xs text-gray-400"><span>Author: </span> <span>{{book.author}}</span>
         {% for tag in book.tags%}
             <span class="ml-2 border-black-200 border-b border-l border-r  px-2">{{tag}}</span>
         {% endfor %}
