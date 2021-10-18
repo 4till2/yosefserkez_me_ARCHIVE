@@ -2,7 +2,9 @@
   link: /
 - name: Now
   link: /now
-- name: Blog
-  link: /blog
+- name: Notebook
+  link: /notebook
 - name: Bookshelf
   link: /bookshelf
+- name: Stream
+  link: /stream

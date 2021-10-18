@@ -1,26 +1,23 @@
 ---
 layout: default
 ---
-
 <article class="prose p-8 w-full m-auto">
     <div class="rounded-xl bg-gray-100 p-6">
         <div class="">
             <span class="text-5xl">{{ page.title }}</span>
             <div class="text-2xl lg:text-xs text-gray-400"><span>Author: </span>
                 <span>{{page.author}}</span></div>
-            <div class="text-2xl lg:text-xs text-gray-400"><span>Published: </span> <span>{{page.published}}</span>
-            </div>
-            <div class="text-2xl lg:text-xs text-gray-400"><span>Date Read: </span>
+            <div class="text-2xl lg:text-xs text-gray-400"><span>Published: </span>
                 <span>{{page.date | date: "%B %d, %Y"}}</span>
             </div>
-            <a href="{{page.library-link}}" target="_blank" class=""><span class="text-2xl lg:text-xs text-gray-400 ">Find in your local library</span>
-            </a>
         </div>
-        <p class="py-2 text-2xl lg:text-lg">
+        {% if page.description %}
+        <p class="py-2">
             {{page.description}}
         </p>
+        {% endif %}
     </div>
-    <div class="text-3xl lg:text-lg p-6">
+    <div class="p-6 text-3xl lg:text-lg ">
         {{ content }}
     </div>
 </article>

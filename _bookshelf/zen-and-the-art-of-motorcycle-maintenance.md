@@ -1,6 +1,7 @@
 ---
 title: Zen and the Art of Motorcycle Maintenance
 author: Robert M. Pirsig
+library-link: http://www.worldcat.org/oclc/673595
 published: 1974
 description: Zen and the Art of Motorcycle Maintenance An Inquiry into Values is a book.
 status: complete

@@ -37,24 +37,24 @@ title: Yosef Serkez
     </div>
 </a>
 
-<a href="/blog">
+<a href="/notebook">
     <div class="bg-gray-100 flex space-x-8 rounded-xl m-5 text-3xl lg:text-xl ">
         <div class="inline-block p-6 align-middle bg-gray-200 rounded-l-xl w-52 h-full">
-            <h3 class="text-3xl font-bold">/blog</h3>
+            <h3 class="text-3xl font-bold">/notebook</h3>
             <p class="text-gray-600 lg:text-lg">What I'm writing.</p>
         </div>
         <div class="self-center p-2">
             <div class="text-2xl lg:text-xs text-gray-400"><span>Last Post: </span>
-                <a href="{{site.posts[0].url}}" class="underline text-gray-800">
-                    {{site.posts[0].title}}
+                <a href="{{site.categories.essays[0].url}}" class="underline text-gray-800">
+                    {{site.categories.notebook[0].title}}
                 </a>
                 <div class="text-2xl lg:text-xs text-gray-400"><span>Last Post Date: </span>
-                    <span>{{site.posts[0].date | date: "%B %d, %Y"}}</span>
+                    <span>{{site.categories.notebook[0].date | date: "%B %d, %Y"}}</span>
                 </div>
                 <div class="text-2xl lg:text-xs text-gray-400"><span>Total Posts: </span>
-                    <span>{{site.posts.size}}</span>
+                    <span>{{site.categories.notebook.size}}</span>
                 </div>
-                <a href="/blog" class="text-2xl lg:text-xs text-gray-800">See all</a>
+                <a href="/notebook" class="text-2xl lg:text-xs text-gray-800">See all</a>
             </div>
         </div>
     </div>
