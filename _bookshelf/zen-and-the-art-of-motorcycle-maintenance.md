@@ -1,31 +1,11 @@
 ---
 title: Zen and the Art of Motorcycle Maintenance
 author: Robert M. Pirsig
-library-link: http://www.worldcat.org/oclc/673595
-published: 1974
-description: Zen and the Art of Motorcycle Maintenance An Inquiry into Values is a book.
+link: "http://books.google.com/books?id=M69poeV1UhoC&dq=intitle:zen-and-the-art-of-motorcycle-maintenance&hl=&source=gbs_api"
+published: 1991
+description: "This narration of a summer motorcycle trip undertaken by a father and his son becomes a text which speaks directly to the confusions and agonies of existence, detailing a personal, philosophical odyssey."
 status: complete
-date: 11-10-2020
-tags: philosophy notes recommend
+date: 2021-10-18
+tags: essence philosophy quality
 ---
-
-# A great book
-I learned more from this book than any other single source. I learned more from this book than any other single source.
-I learned more from this book than any other single source.
-I learned more from this book than any other single source.
-I learned more from this book than any other single source.
-I learned more from this book than any other single source.
-I learned more from this book than any other single source.
-I learned more from this book than any other single source.
-I learned more from this book than any other single source.
-I learned more from this book than any other single source.
-
-1. I learned more from this book than any other single source.
-2. I learned more from this book than any other single source.
-3. I learned more from this book than any other single source.
-
-### Now
-- I learned more from this book than any other single source.
-- I learned more from this book than any other single source.
-- I learned more from this book than any other single source.
 
