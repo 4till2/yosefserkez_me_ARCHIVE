@@ -7,10 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install surge and fire deployment
+      - name: Install Node
         uses: actions/setup-node@v1
         with:
           node-version: 8
+      - name: Install Surge
         run: npm install -g surge
       - name: Cache RubyGems
         uses: actions/cache@v2
