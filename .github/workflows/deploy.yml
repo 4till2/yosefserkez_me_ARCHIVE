@@ -5,21 +5,22 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Install Dependencies
+    name: Deploying to surge
     steps:
       - uses: actions/checkout@v2
       - name: Install surge and fire deployment
         uses: actions/setup-node@v1
         with:
           node-version: 8
-    - uses: actions/cache@v2
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
-      - run: |
-        bundle config path vendor/bundle
-        bundle exec jekyll build
       - run: npm install -g surge
+      - uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - name: Bundle install
+        run: |
+          bundle config path vendor/bundle
+          bundle exec jekyll build
       - run: surge ./_site ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
