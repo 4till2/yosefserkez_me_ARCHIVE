@@ -14,8 +14,14 @@ title: /stream
     <ul>
         {% for stream in site.categories.stream %}
         <li class="rounded shadow my-2 text-gray-800 p-4 my-4" id="{{stream.date | date_to_string}}">
+            <h3 class="text-gray-500 font-bold">{{stream.title}}</h3>
             <div class="text-2xl lg:text-lg">{{stream.content | markdownify}}</div>
             <span class="text-xl lg:text-xs font-mono text-gray-400">{{stream.date | date: "%c"}}</span>
+            <div>
+                {% for tag in stream.tags%}
+                <span class="mr-2 border-black-200 border-b border-l border-r  px-2">{{tag}}</span>
+                {% endfor %}
+            </div>
         </li>
         {% endfor %}
     </ul>
