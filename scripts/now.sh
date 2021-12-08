@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-SOURCE_DIR=../now/_posts/
+SOURCE_DIR=./now/_posts/
 FILENAME=$(date +"%Y-%m-%d-%T")
 PHYSICAL_LOCATION=$1
 

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-SOURCE_DIR=./notebook/_posts/
-TITLE=$1
+SOURCE_DIR=./stream/_posts/
+FILENAME=$(date +"%Y-%m-%d-%T")
+CONTENT=$1
 TAGS=$2
-FILENAME=$(date +"%Y-%m-%d-${TITLE// /-}")
 
 if test -f "${SOURCE_DIR}${FILENAME}.md"; then
   echo "${FILENAME}.md exists."
@@ -10,12 +10,12 @@ if test -f "${SOURCE_DIR}${FILENAME}.md"; then
 fi
 
 echo "---
-title: $TITLE
-description:
-author: Yosef Serkez
+title:
 tags: $TAGS
+
 ---
 
+$CONTENT
 " > "${SOURCE_DIR}${FILENAME}.md"
 ls $SOURCE_DIR
 exit 1

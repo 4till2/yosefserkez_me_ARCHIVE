@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-SOURCE_DIR=../_bookshelf/
+SOURCE_DIR=./_bookshelf/
 FILENAME=$1
 argc=$#
 argv=("$@")
