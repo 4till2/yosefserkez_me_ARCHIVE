@@ -5,18 +5,23 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Deploying to surge
+    name: Install, Build, Deploy
     steps:
       - uses: actions/checkout@v2
       - name: Install surge and fire deployment
         uses: actions/setup-node@v1
         with:
           node-version: 8
-      - uses: ruby/setup-ruby@v1
+        - run: npm install -g surge
+      - uses: actions/cache@v2
         with:
-          ruby-version: 2.6 # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      - run: bundle exec rake
-      - run: bundle exec jekyll build
-      - run: npm install -g surge
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - name: Build Site
+        run: |
+          bundle config path vendor/bundle
+          bundle exec jekyll build
+      - name: Deploy Site
       - run: surge ./_site ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
