@@ -17,6 +17,11 @@ defaults:
       layout: "book"
   - scope:
       path: ""
+      type: "notebook"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
     values:
       layout: "default"
       excerpt_separator: <!--more-->

@@ -1,14 +1,16 @@
-<div class="bg-red-200 m-4 p-4 rounded text-gray-800 text-2xl lg:text-lg">
-  <p>This site is currently undergoing a complete makeover. All of the content is
-  filler nonsense to test the structure, and it is not yet optimized for mobile. Please dont judge me to hard. Or do.
-    Anyway
-    yay for working in public!</p>
-  <span class="text-gray-600 font-mono text-sm">Site last updated: {{ site.time | date_to_rfc822 }}</span>
-</div>
+<!--<div class="bg-red-200 m-4 p-4 rounded text-gray-800 text-2xl lg:text-lg">-->
+<!--  <p>This site is currently undergoing a complete makeover. All of the content is-->
+<!--  filler nonsense to test the structure, and it is not yet optimized for mobile. Please dont judge me to hard. Or do.-->
+<!--    Anyway-->
+<!--    yay for working in public!</p>-->
+<!--  <span class="text-gray-600 font-mono text-sm">Site last updated: {{ site.time | date_to_rfc822 }}</span>-->
+<!--</div>-->
 <nav class="flex justify-between px-8 py-4 text-3xl lg:text-xl">
   {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if page.url == item.link %} class="font-bold"{% endif %} class="hover:font-bold">
+  <span class="hover:font-bold">
+    <a href="{{ item.link }}" {% if item.link contains page.title or page.url == "/" and item.link == "/" %} class="font-bold"{% endif %}>
       /{{item.name | downcase}}
     </a>
+    </span>
   {% endfor %}
 </nav>
