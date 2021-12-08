@@ -4,6 +4,8 @@ page_excerpts: true
 collections:
   bookshelf:
    output: true
+  stream:
+    output: true
 defaults:
   - scope:
       path: ""
