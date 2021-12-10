@@ -28,7 +28,7 @@ A common application architecture to handle these responsibilities consists of t
 4.  The *Server* sends a response back to the *Client* with the relevant data, which then does it's own processing of the response before providing an answer to *Bob*.
 
 Now there might be tens or even hundreds of steps along the way between Bob clicking the button and him seeing the post on screen, but when all is said and done they all serve the same purpose of providing a means for Bob to interact with the post he requested. This leads to our first first principle :)
-> ** Principle 1. **
+> **Principle 1.**
 >Applications are the complete experience of interacting with information.
 
 It is possible to remove an above element from the stack but not the underlying job it fulfills without violating our definition of an Application.
