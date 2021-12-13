@@ -1,5 +1,5 @@
 ---
-title: How to Build an Application in The Year ___?
+title: How to Build an Application
 description:
 author: Yosef Serkez
 tags: development opinion tech
