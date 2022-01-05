@@ -1,0 +1,29 @@
+---
+title: /projects
+---
+
+<div class="p-8">
+    <div class="rounded-xl bg-gray-100 p-6">
+        <div class="">
+            <h1 class="text-5xl font-bold">Projects I'm involved with presently.</h1>
+            <div class="mt-2 text-2xl lg:text-xs text-gray-400"><span>Total: </span> <span>{{site.projects.size}}</span></div>
+            </div>
+        <p class="text-3xl lg:text-lg py-2">
+           Building is a passion, second only to building together. Lets build together.
+        </p>
+    </div>
+
+<ul class=" m-auto">
+{% for project in site.projects %}
+<li class="rounded shadow my-8 text-gray-600">
+    <a href="{{project.link}}"class="p-6 hover:bg-gray-100 rounded-top cursor-pointer flex justify-between">
+        <div>
+        <h4 class="text-3xl m-auto font-mono">{{project.title}}</h4>
+        </div>
+        <div class="p-2 rounded ml-2 float-right  ">{{project.description}}</div>
+    </a>
+</li>
+{% endfor %}
+</ul>
+</div>
+
